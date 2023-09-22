@@ -1,0 +1,16 @@
+<h1>Editar Taller de <%= @name %></h1>
+
+<form action="/<%= @name %>" method="POST">
+    <fieldset>
+        <label for="name">Nombre: </label><br>
+        <input type="text" name="name" id="name" value="<%= @name %>" />
+    </fieldset>
+    <fieldset>
+        <label for="description">Descripcion: </label><br>
+        <textarea name="description" rows="10" cols="80" id="description"><%= @description %></textarea>
+    </fieldset>
+    <fieldset>
+        <input type="hidden" name="_method" value="put">
+        <input type="submit" name="put" value="Editar Taller">
+    </fieldset>
+</form>

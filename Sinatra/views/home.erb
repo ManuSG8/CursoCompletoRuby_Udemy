@@ -1,0 +1,8 @@
+<h1>Talleres del ciclo escolar 2023-2024</h1>
+<% @files.each do |file| %>
+    <% if file != "." && file != ".." %>
+        <a href="/<%= File.basename(file, ".*") %>"><%= File.basename(file, ".*") %></a><br>
+    <% end %>
+<% end %>
+<br>
+<a href="/create">Nuevo taller</a>
